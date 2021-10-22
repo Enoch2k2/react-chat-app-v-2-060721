@@ -1,10 +1,12 @@
+import { SET_CHATS } from "../actions/actionTypes";
 const initialState = []
 
 const chatLogsReducer =  (state = initialState, { type, payload }) => {
   switch (type) {
-
-  default:
-    return state
+    case SET_CHATS:
+      return payload
+    default:
+      return state
   }
 }
 
